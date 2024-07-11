@@ -38,8 +38,8 @@ dependencies:
     specifier: 0.3.0
     version: 0.3.0(react-dom@18.2.0)(react@18.2.0)
   nextra:
-    specifier: 3.0.0-alpha.22
-    version: 3.0.0-alpha.22(@types/react@18.2.79)(next@14.1.4)(react-dom@18.2.0)(react@18.2.0)(typescript@5.4.5)
+    specifier: 3.0.0-alpha.25
+    version: 3.0.0-alpha.25(@types/react@18.2.79)(next@14.1.4)(react-dom@18.2.0)(react@18.2.0)(typescript@5.4.5)
   prettier:
     specifier: 3.2.5
     version: 3.2.5
@@ -1769,6 +1769,7 @@ packages:
 
   /copy-concurrently@1.0.5:
     resolution: {integrity: sha512-f2domd9fsVDFtaFcbaRZuYXwtdmnzqbADSwhSWYxYB/Q8zsdUUFMXVRwXGDMWmbEzAn1kdRrtI1T/KTFOL4X2A==}
+    deprecated: This package is no longer supported.
     dependencies:
       aproba: 1.2.0
       fs-write-stream-atomic: 1.0.10
@@ -2854,6 +2855,7 @@ packages:
 
   /fs-write-stream-atomic@1.0.10:
     resolution: {integrity: sha512-gehEzmPn2nAwr39eay+x3X34Ra+M2QlVUTLhkXPjWdeO8RF9kszk116avgBJM3ZyNHgHXBNx+VmPaFC36k0PzA==}
+    deprecated: This package is no longer supported.
     dependencies:
       graceful-fs: 4.2.11
       iferr: 0.1.5
@@ -2964,6 +2966,7 @@ packages:
 
   /glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
+    deprecated: Glob versions prior to v9 are no longer supported
     dependencies:
       fs.realpath: 1.0.0
       inflight: 1.0.6
@@ -3307,6 +3310,7 @@ packages:
 
   /inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
+    deprecated: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
     dependencies:
       once: 1.4.0
       wrappy: 1.0.2
@@ -4735,6 +4739,7 @@ packages:
 
   /move-concurrently@1.0.1:
     resolution: {integrity: sha512-hdrFxZOycD/g6A6SoI2bB5NA/5NEqD0569+S47WZhPvm46sD50ZHdYaFmnua5lndde9rCHGjmfK7Z8BuCt/PcQ==}
+    deprecated: This package is no longer supported.
     dependencies:
       aproba: 1.2.0
       copy-concurrently: 1.0.5
@@ -4917,6 +4922,56 @@ packages:
 
   /nextra@3.0.0-alpha.22(@types/react@18.2.79)(next@14.1.4)(react-dom@18.2.0)(react@18.2.0)(typescript@5.4.5):
     resolution: {integrity: sha512-4V1kLs0MiQ1KE/Dh1cnLc100Ibyo/PY46v1NdRzrYe7uzCBcSGTiG9OwHTE/34wUwbM5N7TptiDOlV79BBZ0Ng==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      next: '>=13'
+      react: '>=16.13.1'
+      react-dom: '>=16.13.1'
+    dependencies:
+      '@headlessui/react': 1.7.18(react-dom@18.2.0)(react@18.2.0)
+      '@mdx-js/mdx': 3.0.0
+      '@mdx-js/react': 3.0.0(@types/react@18.2.79)(react@18.2.0)
+      '@napi-rs/simple-git': 0.1.10
+      '@shikijs/twoslash': 1.2.0(typescript@5.4.5)
+      '@theguild/remark-mermaid': 0.0.5(react@18.2.0)
+      '@theguild/remark-npm2yarn': 0.3.0
+      better-react-mathjax: 2.0.3(react@18.2.0)
+      clsx: 2.1.1
+      estree-util-to-js: 2.0.0
+      estree-util-value-to-estree: 3.0.1
+      github-slugger: 2.0.0
+      graceful-fs: 4.2.11
+      gray-matter: 4.0.3
+      hast-util-to-estree: 3.1.0
+      katex: 0.16.9
+      next: 14.1.4(@babel/core@7.24.3)(react-dom@18.2.0)(react@18.2.0)
+      p-limit: 4.0.0
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      rehype-katex: 7.0.0
+      rehype-pretty-code: 0.13.0(shiki@1.2.0)
+      rehype-raw: 7.0.0
+      remark-frontmatter: 5.0.0
+      remark-gfm: 4.0.0
+      remark-math: 6.0.0
+      remark-reading-time: 2.0.1
+      remark-smartypants: 2.1.0
+      shiki: 1.2.0
+      slash: 5.1.0
+      title: 3.5.3
+      unist-util-remove: 4.0.0
+      unist-util-visit: 5.0.0
+      yaml: 2.3.4
+      zod: 3.22.4
+      zod-validation-error: 1.5.0(zod@3.22.4)
+    transitivePeerDependencies:
+      - '@types/react'
+      - supports-color
+      - typescript
+    dev: false
+
+  /nextra@3.0.0-alpha.25(@types/react@18.2.79)(next@14.1.4)(react-dom@18.2.0)(react@18.2.0)(typescript@5.4.5):
+    resolution: {integrity: sha512-vikr4bJm75j9V5kMWxmUMphDDaoTxRUvdImmKPhIFd+Fg0LYJJJnpuuV4mf7w0I8uPlfob8ETRK1j776GKAMRw==}
     engines: {node: '>=18'}
     peerDependencies:
       next: '>=13'
@@ -6197,6 +6252,7 @@ packages:
 
   /rimraf@2.7.1:
     resolution: {integrity: sha512-uWjbaKIK3T1OSVptzX7Nl6PvQ3qAGtKEtVRjRuazjfL3Bx5eI409VZSqgND+4UNnmzLVdPj9FqFJNPqBZFve4w==}
+    deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
     dependencies:
       glob: 7.2.3
